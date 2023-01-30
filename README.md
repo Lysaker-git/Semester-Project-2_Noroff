@@ -1,5 +1,5 @@
 # NAFSAT
-### Noroff Auction for students and Teachers
+Noroff Auction for students and Teachers
 
 ## Semester project for Noroff Academy
 This is the repo for semester project year 2 of noroff
