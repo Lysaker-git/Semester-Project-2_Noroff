@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Lysaker-git/Semester-Project-2_Noroff#readme",
   "devDependencies": {
+    "eslint": "^8.33.0",
     "prettier": "^2.8.3",
     "sass": "^1.57.1"
   },
