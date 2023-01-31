@@ -1,5 +1,5 @@
-# NAFSAT
-Noroff Auction for students and Teachers
+# EB Auctions
+Epic Bids Auctions
 
 ## Semester project for Noroff Academy
 This is the repo for semester project year 2 of noroff
@@ -14,5 +14,7 @@ What can you find there?
 - Resources
 - Gantt Chart
 - Kanban Board
+- Wireframes
+- Prototypes
 
 ### More to come as project develops
