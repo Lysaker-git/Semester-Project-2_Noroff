@@ -1,7 +1,3 @@
-export function navTemplate() {
-    console.log('nav checking in')
-}
-
 const navObject = [
     {
         "title": "Home",
@@ -35,21 +31,44 @@ const navObject = [
     }
 ]
 
-export function mobileNavTemplate(links) {
+export function mobileNavTemplate(links) {  
+    if (localStorage.length === 0) {
+        baseLinks(links);  
+    } else {
+        loggedInLinks(links);
+    }
+}
+
+function baseLinks (links) {
     const mobileNavComtainer = document.querySelector(".mobileNav");
     const desktopNavComtainer = document.querySelector(".desktopNav");
     let ul = document.createElement('ul');
-    
-    if (localStorage.length === 0) {    
-        let userLoggedIn = false;
-    } else {
-        let userLoggedIn = true;
-    }
 
     links.forEach(link => {
         let state = link.state;
         
         if (state === "current" || state === "notLogged") {
+            console.log(state)
+            let li = document.createElement('li');
+            let a = document.createElement('a');
+            a.innerText = link.title;
+            li.append(a);
+            ul.append(li);
+            console.log(ul.innerHTML)
+        }
+    })
+    mobileNavComtainer.append(ul);
+}
+
+function loggedInLinks(links) {
+    const mobileNavComtainer = document.querySelector(".mobileNav");
+    const desktopNavComtainer = document.querySelector(".desktopNav");
+    let ul = document.createElement('ul');
+
+    links.forEach(link => {
+        let state = link.state;
+        
+        if (state === "current" || state === "logged") {
             console.log(state)
             let li = document.createElement('li');
             let a = document.createElement('a');
