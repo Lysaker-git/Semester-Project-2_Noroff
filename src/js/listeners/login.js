@@ -4,6 +4,7 @@ export function loginListener(url) {
     const form = document.querySelector('.signIn');
     console.log(form);
     form.addEventListener('submit', (e) => {
+        e.preventDefault();
         const inputData = new FormData(form);
         // console.log(inputData)
         
@@ -19,6 +20,7 @@ export function loginListener(url) {
             }
         }
         // console.log(body)
+        
         loginUser(url, body);
     })
 

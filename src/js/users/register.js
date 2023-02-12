@@ -1,3 +1,3 @@
-export function registerUser(header, body) {
+export function registerUser(url, body) {
 
 }

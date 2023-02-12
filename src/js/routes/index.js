@@ -46,7 +46,7 @@ export function routing() {
         case returnLoc('login'):
             creatingForms(formElements);
             listeneres.registerListener(url.FULL_REG_URL);
-            listeneres.loginListener(url.FULL_REG_URL);
+            listeneres.loginListener(url.FULL_LOGIN_URL);
             break;
         case returnLoc('profile'):
             break;
