@@ -27,6 +27,7 @@ export function creatingForms (elements) {
     
     let formLength = fullForm.children.length;
     button.innerText = formLength >= 4 ? "Sign In" : "Sign Up";
+    button.setAttribute("type", "submit");
 
     signInContainer.append(fullForm, button);
 }
