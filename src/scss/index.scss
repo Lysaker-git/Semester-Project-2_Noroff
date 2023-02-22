@@ -1,3 +1,20 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+$flex-size: 340px;
+
 .card img {
     width: 100;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    --bs-gutter-x: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    flex: 1 1 $flex-size;
 }
