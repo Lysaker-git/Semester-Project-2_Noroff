@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10769,22 +10770,112 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, .h1, h2, .h2, h3, .h3, p, a {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 67.78px;
+  margin-bottom: 0;
+}
+
+header {
+  height: 19rem;
+  display: grid;
+  place-content: center;
+  background-image: url(../../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash\(1\)\(1\).jpg);
+  background-color: #363356;
+  background-blend-mode: multiply;
+}
+
+header > div {
+  height: max-content;
+  align-items: center;
+}
+
+header p {
+  font-size: 25.89px;
+  margin-bottom: 0;
+}
+
+body {
+  background: linear-gradient(#050428, #363356);
+  color: #E5FF94;
+  min-height: 100vh;
+}
+
+.header-image img {
+  max-height: 120px;
+  padding-right: 1rem;
+}
+
+.header image > * {
+  justify-content: center;
+}
+
 .card img {
-  width: 100;
+  max-height: 45%;
+  object-fit: cover;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1rem 6.25rem;
 }
 
 .card {
   --bs-gutter-x: 0;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border: none;
   overflow: hidden;
   margin-bottom: 2rem;
-  flex: 1 1 340px;
+  flex: 1 1 325px;
+  max-height: 20rem;
+  background: rgba(5, 4, 40, 0.3);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.card-inner-right {
+  text-align: end;
+  justify-content: flex-end;
+}
+
+.loadingContainer {
+  height: 20rem;
+  display: grid;
+  place-content: center;
+}
+
+.loadingContent {
+  padding: 3rem 5rem;
+  background: linear-gradient(0.25turn, #050428, #363356);
+  font-size: 25.89px;
+  border-radius: 10px;
+  background-size: 200%;
+  animation: drag 3s linear infinite;
+}
+
+@keyframes drag {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

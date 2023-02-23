@@ -14,44 +14,44 @@
         <section class="mobileNav"></section>
         <section class="desktopNav"></section>
     </nav>
-    <header></header>
+    <header>
+        <div class="d-flex">
+            <div class="header-image">
+                <img src="assets/images/Asset 8 1.svg" alt="Epic Bids logo">
+            </div>
+            <div>
+                <h1>EPIC BIDS</h1>
+                <p>Build your epic collection!</p>
+            </div>
+        </div>
+    </header>
     <main class="container">
         <section class="cards row">
-            <p class="loadingContent">Loading your content...</p>
-            <section class="card shadow">
-                <img src="https://images.unsplash.com/photo-1676808625978-400448b79d48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-                <div class="card-body">
-                    <h2>Some Header</h2>
-                    <p>Some text asjdbakjsds jasdkasmdansd jjla</p>
-                </div>
-            </section>
-            <section class="card shadow">
-                <img src="https://images.unsplash.com/photo-1676808625978-400448b79d48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-                <div class="card-body">
-                    <h2>Some Header</h2>
-                    <p>Some text asjdbakjsds jasdkasmdansd jjla</p>
-                </div>
-            </section>
-            <section class="card shadow">
-                <img src="https://images.unsplash.com/photo-1676808625978-400448b79d48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-                <div class="card-body">
-                    <h2>Some Header</h2>
-                    <p>Some text asjdbakjsds jasdkasmdansd jjla</p>
-                </div>
-            </section>
-            
+            <div class="loadingContainer">
+                <p class="loadingContent shadow">Loading your content...</p>
+            </div>
         </section>
     </main>
     <footer>
 
     </footer>
 
-    <template>
-        <section class="card">
+    <template class="cardTemplate">
+        <section class="card shadow">
             <img src="" alt="">
             <div class="card-body">
                 <h2></h2>
-                <p></p>
+                <p class="description"></p>
+                <div class="card-inner">
+                    <div class="card-inner-left">
+                        <p class="title"></p>
+                        <p><strong></strong></p>
+                    </div>
+                    <div class="card-inner-right">
+                        <p class="title"></p>
+                        <p><strong></strong></p>
+                    </div>
+                </div>
             </div>
         </section>
     </template>
