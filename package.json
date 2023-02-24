@@ -1,6 +1,6 @@
 {
   "name": "epic-bids",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Epic Bids auction page for Noroff semester project 2nd year",
   "main": "index.js",
   "scripts": {
