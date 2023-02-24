@@ -9,17 +9,89 @@
     <link rel="stylesheet" href="src/css/styles.css">    
 </head>
 <body>
-    <nav>
-        <section class="mobileNav"></section>
-        <section class="desktopNav"></section>
+    <nav class="navbar navbar-expand-lg container">
+        <div class="container-fluid">
+            <img src="/assets/images/Asset 8 1.svg" alt="Epic Bids logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <label for="check">
+                <input type="checkbox" id="check"/> 
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+                </div>
+            </div>
+        </div>
     </nav>
     <main>
         <section class="singleCard">
-            <p class="loadingContent">Loading your content...</p>
+            <div class="loadingContainer">
+                <p class="loadingContent shadow">Loading your content...</p>
+            </div>
         </section>
     </main>
     <footer>
 
     </footer>
+
+    <template class="navTemplate">
+        <div class="navbar-nav">
+        </div>
+    </template>
+
+    <template class="cardTemplateLoggedIn">
+        <section class="card shadow">
+            <img src="" alt="">
+            <div class="card-body">
+                <h2></h2>
+                <p class="description"></p>
+                <div class="card-inner">
+                    <div class="card-inner-left">
+                        <p class="title">Time Left:</p>
+                        <p><strong></strong></p>
+                    </div>
+                    <div class="card-inner-right">
+                        <p class="title">Current Bid:</p>
+                        <p><strong></strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bid-container">
+                <form class="form" action="">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="bidInput">
+                        <label for="bidInput">Type an amount:</label>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn">Bid</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </template>
+
+    <template class="cardTemplate">
+        <section class="card shadow">
+            <img src="" alt="">
+            <div class="card-body">
+                <h2></h2>
+                <p class="description"></p>
+                <div class="card-inner">
+                    <div class="card-inner-left">
+                        <p class="title">Time Left:</p>
+                        <p><strong></strong></p>
+                    </div>
+                    <div class="card-inner-right">
+                        <p class="title">Current Bid:</p>
+                        <p><strong></strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
 </body>
 </html>

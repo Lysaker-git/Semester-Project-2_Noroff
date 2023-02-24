@@ -183,11 +183,14 @@ body {
     overflow: hidden;
     margin-bottom: 2rem;
     flex: 1 1 $flex-size;
-    max-height: 20rem;
+    max-height: fit-content;
     background: $bg-card;
     cursor: pointer;
     transition: all .4s ease-in-out;
     transform: scale(1);
+}
+.description {
+    margin-bottom: 3rem;
 }
 .card:hover {
     transform: scale(1.05);
@@ -203,19 +206,25 @@ body {
 }
 
 .loadingContainer {
+    width: 100%;
     height: 20rem;
     display: grid;
     place-content: center;
+
+    p {
+        padding: 3rem 5rem;
+        background: linear-gradient(0.25turn, $dark, $medium);
+        font-size: $header-s;
+        border-radius: 10px;
+        background-size: 200%;
+        animation: drag 3s linear infinite;
+    }
 }
 
-.loadingContent {
-    padding: 3rem 5rem;
-    background: linear-gradient(0.25turn, $dark, $medium);
-    font-size: $header-s;
-    border-radius: 10px;
-    background-size: 200%;
-    animation: drag 3s linear infinite;
+.card-body {
+    height: 6rem;
 }
+
 
 @keyframes drag {
     0% {
@@ -246,12 +255,13 @@ label {
 .form-control {
     background-color: $bg-form;
     border: none;
-}
-.form-control:focus {
-    background-color: $bg-form;
+    &:focus {
+        background-color: $bg-form;
+    }
 }
 
-.forms button {
+
+.forms button, .bid-container form button {
     background-color: $accent;
     font-size: $header-s;
     font-weight: 700;
@@ -261,3 +271,21 @@ label {
     background-color: $bg-card;
     border: 1px solid $accent;
 }
+
+.bid-container {
+    form {
+        display: flex;
+        width: 100%;
+    }
+    input {
+        border-radius: 0;
+    }
+    div:first-of-type {
+        width: 100%;
+    }
+    button {
+        height: 100%;
+        border-radius: 0;
+    }
+}
+

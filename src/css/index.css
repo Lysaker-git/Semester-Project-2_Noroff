@@ -10914,11 +10914,15 @@ body {
   overflow: hidden;
   margin-bottom: 2rem;
   flex: 1 1 325px;
-  max-height: 20rem;
+  max-height: fit-content;
   background: rgba(5, 4, 40, 0.3);
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   transform: scale(1);
+}
+
+.description {
+  margin-bottom: 3rem;
 }
 
 .card:hover {
@@ -10935,18 +10939,22 @@ body {
 }
 
 .loadingContainer {
+  width: 100%;
   height: 20rem;
   display: grid;
   place-content: center;
 }
-
-.loadingContent {
+.loadingContainer p {
   padding: 3rem 5rem;
   background: linear-gradient(0.25turn, #050428, #363356);
   font-size: 25.89px;
   border-radius: 10px;
   background-size: 200%;
   animation: drag 3s linear infinite;
+}
+
+.card-body {
+  height: 6rem;
 }
 
 @keyframes drag {
@@ -10978,12 +10986,11 @@ label {
   background-color: rgba(229, 255, 148, 0.16);
   border: none;
 }
-
 .form-control:focus {
   background-color: rgba(229, 255, 148, 0.16);
 }
 
-.forms button {
+.forms button, .bid-container form button {
   background-color: #E5FF94;
   font-size: 25.89px;
   font-weight: 700;
@@ -10993,6 +11000,21 @@ label {
 .forms button:hover {
   background-color: rgba(5, 4, 40, 0.3);
   border: 1px solid #E5FF94;
+}
+
+.bid-container form {
+  display: flex;
+  width: 100%;
+}
+.bid-container input {
+  border-radius: 0;
+}
+.bid-container div:first-of-type {
+  width: 100%;
+}
+.bid-container button {
+  height: 100%;
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
