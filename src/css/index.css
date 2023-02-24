@@ -10772,11 +10772,94 @@ textarea.form-control-lg {
 }
 h1, .h1, h2, .h2, h3, .h3, p, a {
   font-family: "Atkinson Hyperlegible", sans-serif;
+  color: #E5FF94;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  cursor: pointer;
+}
+
+label span {
+  background: #E5FF94;
+  border-radius: 10px;
+  height: 3px;
+  margin: 7px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 50%;
+}
+
+span:nth-of-type(2) {
+  width: 100%;
+}
+
+span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+
+input[type=checkbox]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type=checkbox]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(23px, -10px) rotatez(45deg);
 }
 
 h1, .h1 {
   font-size: 67.78px;
   margin-bottom: 0;
+}
+
+nav {
+  margin-bottom: 4rem;
+}
+
+.nav-link {
+  font-family: "Atkinson Hyperledgible", sans-serif;
+  color: #E5FF94;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+  width: 100%;
+  display: flex;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.container-fluid > img, .container-sm > img, .container-md > img, .container-lg > img, .container-xl > img, .container-xxl > img {
+  max-height: 3rem;
+  margin-right: auto;
 }
 
 header {
@@ -10876,6 +10959,40 @@ body {
   100% {
     background-position: left;
   }
+}
+label {
+  font-family: "Atkinson Hyperledgible", sans-serif;
+}
+
+.forms {
+  padding: 2rem;
+  background-color: rgba(5, 4, 40, 0.3);
+  border-radius: 0.5rem;
+  min-width: 300px;
+  max-width: 350px;
+  height: fit-content;
+  margin: auto;
+}
+
+.form-control {
+  background-color: rgba(229, 255, 148, 0.16);
+  border: none;
+}
+
+.form-control:focus {
+  background-color: rgba(229, 255, 148, 0.16);
+}
+
+.forms button {
+  background-color: #E5FF94;
+  font-size: 25.89px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.forms button:hover {
+  background-color: rgba(5, 4, 40, 0.3);
+  border: 1px solid #E5FF94;
 }
 
 /*# sourceMappingURL=index.css.map */

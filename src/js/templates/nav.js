@@ -39,6 +39,8 @@ export function mobileNavTemplate(links) {
     }
 }
 
+// <a class="nav-link"  href="#"></a>
+
 function baseLinks (links) {
     const mobileNavComtainer = document.querySelector(".mobileNav");
     const desktopNavComtainer = document.querySelector(".desktopNav");

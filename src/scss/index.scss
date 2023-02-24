@@ -1,6 +1,11 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+
+
+
+
 //fonts
 $font-heavy: 'Atkinson Hyperlegible', sans-serif;
 $font-normal: 'Atkinson Hyperledgible', sans-serif;
@@ -24,14 +29,111 @@ $bg-body-gradient: linear-gradient($dark, $medium);
 $bg-card: rgba(5,4,40,0.3);
 $bg-form: rgba(229,255,148,0.16);
 
+
 h1, h2, h3, p, a {
     font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: $accent;
 }
+
+// got hamburger from: https://codepen.io/Danilo06/pen/PoNNvGm as BS hamburger did not want to play
+
+label{
+
+    display:flex;
+    flex-direction:column;
+    width:50px;
+    cursor:pointer;
+    }
+    
+    label span{
+     background: $accent;
+     border-radius:10px;
+     height:3px;
+     margin: 7px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   input[type="checkbox"]{
+     display:none;
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(8px,0px)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(23px, -10px) rotatez(45deg);
+   
+   }
+
 
 h1 {
     font-size: $header-l;
     margin-bottom: 0;
 }
+
+
+nav {
+    margin-bottom: 4rem;
+}
+.nav-link {
+    font-family: $font-normal;
+    color: $accent;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+.navbar > .container-fluid {
+    width: 100%;
+    display: flex;
+
+}
+.navbar-nav {
+    margin-left: auto;
+}
+
+.container-fluid > img {
+    max-height: 3rem;
+    margin-right: auto;
+}
+
 header {
     height: 19rem;
     display: grid;
@@ -127,3 +229,35 @@ body {
     }
 }
 
+label {
+    font-family: $font-normal;
+}
+
+.forms {
+    padding: 2rem;
+    background-color: $bg-card;
+    border-radius: .5rem;
+    min-width: 300px;
+    max-width: 350px;
+    height: fit-content;
+    margin: auto;
+}
+
+.form-control {
+    background-color: $bg-form;
+    border: none;
+}
+.form-control:focus {
+    background-color: $bg-form;
+}
+
+.forms button {
+    background-color: $accent;
+    font-size: $header-s;
+    font-weight: 700;
+    width: 100%;
+}
+.forms button:hover {
+    background-color: $bg-card;
+    border: 1px solid $accent;
+}
