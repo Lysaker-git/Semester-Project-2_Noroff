@@ -2,7 +2,7 @@ const navObject = [
     {
         "title": "Home",
         "state": "current",
-        "link": "/"
+        "link": "/index.html"
     },
     {
         "title": "Listings",
@@ -31,7 +31,8 @@ const navObject = [
     }
 ]
 
-export function mobileNavTemplate(links) {  
+export function mobileNavTemplate(links) { 
+    console.log(localStorage.length) 
     if (localStorage.length === 0) {
         baseLinks(links);  
     } else {
@@ -42,45 +43,25 @@ export function mobileNavTemplate(links) {
 // <a class="nav-link"  href="#"></a>
 
 function baseLinks (links) {
-    const mobileNavComtainer = document.querySelector(".mobileNav");
-    const desktopNavComtainer = document.querySelector(".desktopNav");
-    let ul = document.createElement('ul');
-
-    links.forEach(link => {
-        let state = link.state;
-        
-        if (state === "current" || state === "notLogged") {
-            console.log(state)
-            let li = document.createElement('li');
-            let a = document.createElement('a');
+    console.log("listening")
+    const navContainer = document.querySelector('#navbarNavAltMarkup')
+    const navTemplate = document.querySelector('.navTemplate');
+    const doc = navTemplate.content.cloneNode(true);
+    links.forEach((link) => {
+        const state = link.state;
+        if (state != "logged") {
+            const a = document.createElement('a');
+            a.href = link.link;
             a.innerText = link.title;
-            li.append(a);
-            ul.append(li);
-            console.log(ul.innerHTML)
+            a.classList.add('nav-link');
+            doc.querySelector('.navbar-nav').append(a);
         }
     })
-    mobileNavComtainer.append(ul);
+    navContainer.append(doc)
 }
 
 function loggedInLinks(links) {
-    const mobileNavComtainer = document.querySelector(".mobileNav");
-    const desktopNavComtainer = document.querySelector(".desktopNav");
-    let ul = document.createElement('ul');
-
-    links.forEach(link => {
-        let state = link.state;
-        
-        if (state === "current" || state === "logged") {
-            console.log(state)
-            let li = document.createElement('li');
-            let a = document.createElement('a');
-            a.innerText = link.title;
-            li.append(a);
-            ul.append(li);
-            console.log(ul.innerHTML)
-        }
-    })
-    mobileNavComtainer.append(ul);
+    console.log("listening 2")
 }
 
 mobileNavTemplate(navObject);
