@@ -254,16 +254,20 @@ label {
     max-width: 350px;
     height: fit-content;
     margin: auto;
+    
 }
 
 .form-control {
     background-color: $bg-form;
     border: none;
+    color: $accent;
     &:focus {
         background-color: $bg-form;
     }
 }
-
+.form-control:focus {
+    color: $accent;
+}
 
 .forms button, .bid-container form button {
     background-color: $accent;

@@ -41,6 +41,7 @@ function createElement(doc, element) {
     input.classList.add('form-control');
     input.id = element.title;
     input.placeholder = element.title;
+    input.name = element.title;
 
     label.for = element.title;
     label.innerText = element.title;
@@ -74,4 +75,6 @@ export function creatingForms (page) {
     button.innerText = "Sign In";
     const htmlContainer = document.querySelector('.forms-main');
     htmlContainer.append(doc)
+
+    
 }

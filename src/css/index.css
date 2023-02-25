@@ -10989,9 +10989,14 @@ label {
 .form-control {
   background-color: rgba(229, 255, 148, 0.16);
   border: none;
+  color: #E5FF94;
 }
 .form-control:focus {
   background-color: rgba(229, 255, 148, 0.16);
+}
+
+.form-control:focus {
+  color: #E5FF94;
 }
 
 .forms button, .bid-container form button {

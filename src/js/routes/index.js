@@ -15,6 +15,7 @@ export function routing() {
             break;
         case returnLoc('signup'):
             creatingForms(whatPage);
+            listeneres.signupListener(url.FULL_REG_URL);
             break;
         case returnLoc('profile'):
             break;
