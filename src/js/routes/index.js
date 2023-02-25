@@ -12,6 +12,7 @@ export function routing() {
     switch (true) {
         case returnLoc('login'):
             creatingForms(whatPage);
+            listeneres.loginListener(url.FULL_LOGIN_URL);
             break;
         case returnLoc('signup'):
             creatingForms(whatPage);
