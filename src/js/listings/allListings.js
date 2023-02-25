@@ -17,6 +17,7 @@ export function listingSetup (listings) {
         const loadingContainer = document.querySelector('.loadingContainer')
         loadingContainer.style.display = "none"
         listingPost(Title, Desc, Ends, Image);
+        
     })
 
 }

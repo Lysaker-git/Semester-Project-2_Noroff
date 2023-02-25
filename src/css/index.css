@@ -10911,6 +10911,10 @@ body {
   gap: 1rem 6.25rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .card {
   --bs-gutter-x: 0;
   border-radius: 0.5rem;
@@ -10940,6 +10944,40 @@ body {
 .card-inner-right {
   text-align: end;
   justify-content: flex-end;
+}
+
+.profile {
+  max-width: 325px;
+}
+
+.profile h2, .profile .h2 {
+  margin-bottom: 2rem;
+}
+
+.profile-inner p {
+  line-height: 0.5rem;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container img:first-of-type {
+  position: absolute;
+  z-index: 1;
+}
+
+.img-container img:last-of-type {
+  position: absolute;
+  left: 23px;
+  top: 23px;
+  z-index: 2;
+  max-width: 86px;
+}
+
+.img-container {
+  height: 132px;
+  overflow: hidden;
 }
 
 .loadingContainer {
@@ -11003,6 +11041,31 @@ label {
   background-color: #E5FF94;
   font-size: 25.89px;
   font-weight: 700;
+  width: 100%;
+}
+
+#bidInput::-webkit-outer-spin-button,
+#bidInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.profileForm {
+  max-width: 350px;
+  margin-left: auto;
+  margin-bottom: 3rem;
+}
+.profileForm label {
+  width: fit-content;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.profileForm input {
   width: 100%;
 }
 

@@ -24,16 +24,48 @@
             </div>
         </div>
     </nav>
-    <main>
-        <section class="profile">
-
-        </section>
-        <div class="desktopImage"></div>
-        <section class="profile">
-            <div class="loadingContainer">
-                <p class="loadingContent shadow">Loading your content...</p>
+    <main class="container">
+        <div class="profile">
+            <section class="card shadow">
+                <div class="img-container">
+                    <img src="../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash(1)(1).jpg" alt="" class="backgroundImage">
+                    <img src="https://www.svgrepo.com/show/255158/profile-user.svg" alt="" class="avatarImage">
+                </div>
+                <div class="card-body">
+                    <h2>Robin</h2>
+                    <hr>
+                    <div class="profile-inner">
+                        <p class="credits">Credits: 1000</p>
+                        <p class="wins">Number of Wins: 12</p>
+                        <p class="listings">Number of Listings: 50</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <form class="profileForm form d-flex">
+            <label for="search">Search Listings:</label>
+            <input type="text" class="form-control" id="search">
+        </form>
+        <section class="card shadow">
+            <img src="" alt="">
+            <div class="card-body">
+                <h2></h2>
+                <p class="description"></p>
+                <div class="card-inner">
+                    <div class="card-inner-left">
+                        <p class="title">Time left:</p>
+                        <p class="timeLeft"><strong></strong></p>
+                    </div>
+                    <div class="card-inner-right">
+                        <p class="title">Bids:</p>
+                        <p><strong class="bids"></strong></p>
+                    </div>
+                </div>
             </div>
         </section>
+            <!-- <div class="loadingContainer">
+                <p class="loadingContent shadow">Loading your content...</p>
+            </div> -->
     </main>
     <footer>
 
@@ -41,6 +73,42 @@
     <template class="navTemplate">
         <div class="navbar-nav">
         </div>
+    </template>
+    <template class="cardTemplate">
+        <section class="card shadow">
+            <img src="" alt="">
+            <div class="card-body">
+                <h2></h2>
+                <p class="description"></p>
+                <div class="card-inner">
+                    <div class="card-inner-left">
+                        <p class="title">Time left:</p>
+                        <p class="timeLeft"><strong></strong></p>
+                    </div>
+                    <div class="card-inner-right">
+                        <p class="title">Bids:</p>
+                        <p><strong class="bids"></strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template class="profileTemplate">
+        <section class="card shadow">
+            <div class="img-container">
+                <img src="" alt="" class="backgroundImage">
+                <img src="" alt="" class="avatarImage">
+            </div>
+            <div class="card-body">
+                <h2></h2>
+                <hr>
+                <div class="profile-inner">
+                    <p class="credits"></p>
+                    <p class="wins"></p>
+                    <p class="listings"></p>
+                </div>
+            </div>
+        </section>
     </template>
 </body>
 </html>
