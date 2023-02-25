@@ -32,20 +32,21 @@ const navObject = [
 ]
 
 export function mobileNavTemplate(links) { 
+    const navContainer = document.querySelector('#navbarNavAltMarkup')
+    const navTemplate = document.querySelector('.navTemplate');
+    const doc = navTemplate.content.cloneNode(true);
+
     console.log(localStorage.length) 
     if (localStorage.length === 0) {
-        baseLinks(links);  
+        baseLinks(links, navContainer, doc);  
     } else {
-        loggedInLinks(links);
+        loggedInLinks(links, navContainer, doc);
     }
 }
 
 // <a class="nav-link"  href="#"></a>
 
-function baseLinks (links) {
-    const navContainer = document.querySelector('#navbarNavAltMarkup')
-    const navTemplate = document.querySelector('.navTemplate');
-    const doc = navTemplate.content.cloneNode(true);
+function baseLinks (links, container, doc) {
     links.forEach((link) => {
         const state = link.state;
         if (state != "logged") {
@@ -56,11 +57,21 @@ function baseLinks (links) {
             doc.querySelector('.navbar-nav').append(a);
         }
     })
-    navContainer.append(doc)
+    container.append(doc)
 }
 
-function loggedInLinks(links) {
-    console.log("listening 2")
+function loggedInLinks(links, container, doc) {
+    links.forEach((link) => {
+        const state = link.state;
+        if (state != "notLogged") {
+            const a = document.createElement('a');
+            a.href = link.link;
+            a.innerText = link.title;
+            a.classList.add('nav-link');
+            doc.querySelector('.navbar-nav').append(a);
+        }
+    })
+    container.append(doc)
 }
 
 mobileNavTemplate(navObject);
