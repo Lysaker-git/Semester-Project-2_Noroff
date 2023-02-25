@@ -51,10 +51,12 @@ export function routing() {
         case returnLoc('profile'):
             break;
         case returnLoc('listings'):
+            listeneres.listingsListener(url.FULL_LISTINGS_URL);
             break;
         case returnLoc('single'):
             break;
         default:
+            listeneres.listingsListener(url.FULL_LISTINGS_URL);
             console.log('default')
             break;
     }

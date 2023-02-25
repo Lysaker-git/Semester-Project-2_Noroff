@@ -43,7 +43,6 @@ export function mobileNavTemplate(links) {
 // <a class="nav-link"  href="#"></a>
 
 function baseLinks (links) {
-    console.log("listening")
     const navContainer = document.querySelector('#navbarNavAltMarkup')
     const navTemplate = document.querySelector('.navTemplate');
     const doc = navTemplate.content.cloneNode(true);

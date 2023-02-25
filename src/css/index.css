@@ -10869,6 +10869,7 @@ header {
   background-image: url(../../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash\(1\)\(1\).jpg);
   background-color: #363356;
   background-blend-mode: multiply;
+  margin-bottom: 5rem;
 }
 
 header > div {
@@ -10883,6 +10884,8 @@ header p {
 
 body {
   background: linear-gradient(#050428, #363356);
+  background-position: center;
+  background-attachment: fixed;
   color: #E5FF94;
   min-height: 100vh;
 }
@@ -10897,8 +10900,9 @@ body {
 }
 
 .card img {
-  max-height: 45%;
+  max-height: 15rem;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .cards {
@@ -10954,7 +10958,7 @@ body {
 }
 
 .card-body {
-  height: 6rem;
+  height: fit-content;
 }
 
 @keyframes drag {
