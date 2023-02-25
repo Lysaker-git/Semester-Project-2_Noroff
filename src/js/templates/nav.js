@@ -17,7 +17,7 @@ const navObject = [
     {
         "title": "Sign-up",
         "state": "notLogged",
-        "link": "/authPages/login.html"
+        "link": "/authPages/signup.html"
     },
     {
         "title": "Profile",
