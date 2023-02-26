@@ -2,7 +2,6 @@ import { listingPost } from "../templates/index.js";
 
 
 export function listingSetup (listings) {
-    
     listings.forEach((listing) => {
         // console.log(listing)
         const Title = listing.title;

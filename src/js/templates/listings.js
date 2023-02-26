@@ -1,5 +1,6 @@
 
 export function listingPost (title, desc, ends, image) {
+
     const token = localStorage.length;
     let templateClass = '.cardTemplate';
     if (token === 1) {
