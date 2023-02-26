@@ -20,7 +20,6 @@ export function listingPost (title, desc, ends, image) {
     const timeElement = doc.querySelector('.timeLeft');
     getTimeLeft(ends, timeElement)
 
-    const test = timeElement.innerHTML;
 
     const container = document.querySelector('.cards');
     container.append(doc);

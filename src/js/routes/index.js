@@ -19,6 +19,7 @@ export function routing() {
             listeneres.signupListener(url.FULL_REG_URL);
             break;
         case returnLoc('profile'):
+            listeneres.profileListener(url.FULL_PROFILE_URL)
             break;
         case returnLoc('listings'):
             listeneres.listingsListener(url.FULL_LISTINGS_URL);

@@ -1,4 +1,5 @@
 import { headerWithBodyNoAuth } from "../api/index.js"
+import { loginUser } from "./index.js";
 
 export async function registerUser(url, body, method) {
 

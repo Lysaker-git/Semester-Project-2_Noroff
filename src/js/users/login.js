@@ -8,5 +8,7 @@ export async function loginUser(url, body, method) {
 
     if (json.accessToken) {
         storingToken('accessToken', json.accessToken);
+        storingToken('name', json.name);
+        window.location.assign('/userPages/profile.html');
     }
 }
