@@ -170,6 +170,7 @@ body {
 
 .card img {
     max-height: 15rem;
+    width: 100%;
     object-fit: cover;
     overflow: hidden;
 }
@@ -196,7 +197,7 @@ body {
     transform: scale(1);
 }
 .description {
-    margin-bottom: 3rem;
+    margin-bottom: auto;
 }
 .card:hover {
     transform: scale(1.05);
@@ -210,7 +211,6 @@ body {
         justify-content: flex-end;
     }
 }
-
 // PROFILE
 
 .profile {
@@ -262,7 +262,10 @@ body {
 }
 
 .card-body {
-    height: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -317,6 +320,7 @@ label {
     margin: 0;
 }
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 .profileForm {
@@ -356,3 +360,8 @@ input[type=number] {
     }
 }
 
+.card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}

@@ -1,15 +1,17 @@
 
-export function listingPost (title, desc, ends, image) {
+export function listingPost (title, desc, ends, image, id, bid) {
 
     const token = localStorage.length;
     let templateClass = '.cardTemplate';
-    if (token === 1) {
+    if (token >= 1) {
         templateClass = '.cardTemplateLoggedIn'
     }
     let template = document.querySelector(`${templateClass}`);
 
     const doc = template.content.cloneNode(true);
     // console.log("titles")
+    doc.querySelector('.bids').innerText = bid;
+    doc.querySelector('.card-link').href = `single.html?id=${id}`
     doc.querySelector('h2').innerText = title;
     doc.querySelector('.description').innerText = desc;
     if (image) {

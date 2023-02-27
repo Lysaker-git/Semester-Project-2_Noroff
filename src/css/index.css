@@ -10901,6 +10901,7 @@ body {
 
 .card img {
   max-height: 15rem;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -10930,7 +10931,7 @@ body {
 }
 
 .description {
-  margin-bottom: 3rem;
+  margin-bottom: auto;
 }
 
 .card:hover {
@@ -10998,7 +10999,10 @@ body {
 }
 
 .card-body {
-  height: fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @keyframes drag {
@@ -11053,6 +11057,7 @@ label {
 }
 
 input[type=number] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -11089,6 +11094,12 @@ input[type=number] {
 .bid-container button {
   height: 100%;
   border-radius: 0;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
