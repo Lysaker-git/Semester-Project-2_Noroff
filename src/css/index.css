@@ -10925,17 +10925,12 @@ body {
   flex: 1 1 325px;
   max-height: fit-content;
   background: rgba(5, 4, 40, 0.3);
-  cursor: pointer;
   transition: all 0.4s ease-in-out;
   transform: scale(1);
 }
 
 .description {
   margin-bottom: auto;
-}
-
-.card:hover {
-  transform: scale(1.05);
 }
 
 .card-inner {
@@ -11110,6 +11105,19 @@ input[type=number] {
   display: block;
   text-decoration: none;
   height: 100%;
+}
+
+.bids {
+  margin-top: 2rem;
+  overflow-y: scroll;
+}
+
+.bids > * {
+  display: flex;
+}
+
+.bids > * p {
+  width: 33%;
 }
 
 /*# sourceMappingURL=index.css.map */

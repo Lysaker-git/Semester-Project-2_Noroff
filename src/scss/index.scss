@@ -192,15 +192,12 @@ body {
     flex: 1 1 $flex-size;
     max-height: fit-content;
     background: $bg-card;
-    cursor: pointer;
     transition: all .4s ease-in-out;
     transform: scale(1);
 }
+
 .description {
     margin-bottom: auto;
-}
-.card:hover {
-    transform: scale(1.05);
 }
 .card-inner {
     display: flex;
@@ -371,4 +368,15 @@ input[type=number] {
     display: block;
     text-decoration: none;
     height: 100%;
+}
+
+.bids {
+    margin-top: 2rem;
+    overflow-y: scroll;
+}
+.bids > * {
+    display: flex;
+}
+.bids > * p {
+    width: 33%;
 }

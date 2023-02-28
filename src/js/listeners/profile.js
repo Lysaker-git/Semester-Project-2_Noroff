@@ -11,9 +11,14 @@ export async function profileListener (url) {
         const json = await response.json();
         const bidsURL = `${url}${name}/bids?_listings=true`;
         
+        
+        
         createProfile(json);
         profileListings(url, name, token);
-        profileBids(bidsURL, token);
+        const bidsContainer = document.querySelector('.bids');
+        profileBids(bidsURL, token, bidsContainer);
+
+
     } else {
         console.log("small")
     }
@@ -30,9 +35,32 @@ export async function profileListings (url, name, token) {
     }
 }
 
-async function profileBids (url, token) {
+async function profileBids (url, token, container) {
     const response = await fetch(url, headerWithBodyAndAuth('GET', token))
     const json = await response.json();
+    
+    
+    json.forEach(bid => {
+        const amount = bid.amount;
+        const listing = bid.listing;
+        const name = bid.bidderName; 
+    
+        const title = listing.title;
 
-    console.log(json);
+        console.log(amount, listing, name, title)
+        const containerElem = document.createElement('div');
+        const amountElem = document.createElement('p');
+        const listingElem = document.createElement('a');
+        const nameElem = document.createElement('p');
+
+        amountElem.innerText = amount;
+        listingElem.innerText = title;
+        listing.href = '#';
+        nameElem.innerText = name;
+
+        containerElem.append(amountElem, nameElem, listingElem)
+        container.append(containerElem);
+    })
+
+    // console.log(json);
 }
