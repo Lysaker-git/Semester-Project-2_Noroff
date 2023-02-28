@@ -1,15 +1,16 @@
-import { listingPost } from "../templates/index.js";
+import { singleListingPost } from "../templates/index.js";
 
 
-export function listingSetup (listings) {
-    listings.forEach((listing) => {
+export function singleListingSetup (listing) {
+        // console.log(listing)
         const Title = listing.title;
         const Desc = listing.description;
         const Ends = listing.endsAt;
         const Image = listing.media[0];
         const Id = listing.id;
         const bidArray = listing.bids;
-        const lastBid = bidArray[bidArray.length - 1]
+        const sortedBids = bidArray.sort((a, b) => a.amount - b.amount);
+        const lastBid = sortedBids[sortedBids.length - 1]
         let bidAmount = 0;
         if (lastBid != undefined) {
             bidAmount = lastBid.amount;
@@ -17,9 +18,7 @@ export function listingSetup (listings) {
 
         const loadingContainer = document.querySelector('.loadingContainer')
         loadingContainer.style.display = "none"
-        listingPost(Title, Desc, Ends, Image, Id, bidAmount);
-        
-    })
+        singleListingPost(Title, Desc, Ends, Image, Id, bidAmount, sortedBids);
 
 }
 

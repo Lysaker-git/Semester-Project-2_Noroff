@@ -214,14 +214,21 @@ body {
 // PROFILE
 
 .profile {
-    max-width: $flex-size;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 4rem;
 }
-
+.profile > * {
+    flex: 1 1 $flex-size;
+}
 .profile h2 {
     margin-bottom: 2rem;
 }
 .profile-inner p {
     line-height: .5rem;
+}
+.profile > section:last-of-type hr {
+    margin-bottom: auto;
 }
 .img-container {
     position: relative;

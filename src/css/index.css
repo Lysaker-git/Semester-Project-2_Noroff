@@ -10948,7 +10948,13 @@ body {
 }
 
 .profile {
-  max-width: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4rem;
+}
+
+.profile > * {
+  flex: 1 1 325px;
 }
 
 .profile h2, .profile .h2 {
@@ -10957,6 +10963,10 @@ body {
 
 .profile-inner p {
   line-height: 0.5rem;
+}
+
+.profile > section:last-of-type hr {
+  margin-bottom: auto;
 }
 
 .img-container {
