@@ -45,30 +45,33 @@
         <div class="navbar-nav">
         </div>
     </template>
-    <template class="cardTemplate">
+    <template class="cardTemplate cardTemplateLoggedIn">
         <section class="card shadow">
-            <img src="" alt="">
-            <div class="card-body">
-                <h2></h2>
-                <p class="description"></p>
-                <div class="card-inner">
-                    <div class="card-inner-left">
-                        <p class="title">Time left:</p>
-                        <p class="timeLeft"><strong></strong></p>
-                    </div>
-                    <div class="card-inner-right">
-                        <p class="title">Bids:</p>
-                        <p><strong class="bids"></strong></p>
+            <a class="card-link" href="">
+                <img loading="lazy" src="" alt="">
+                <div class="card-body">
+                    <h2></h2>
+                    <p class="description"></p>
+                    <div class="card-inner">
+                        <div class="card-inner-left">
+                            <p class="title">Time left:</p>
+                            <p class="timeLeft"><strong></strong></p>
+                        </div>
+                        <div class="card-inner-right">
+                            <p class="title">Highest Bid:</p>
+                            <p><strong class="bids"></strong></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </a>
+            </section>
     </template>
     <template class="profileTemplate">
         <section class="card shadow">
             <div class="img-container">
                 <img src="../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash(1)(1).jpg" alt="" class="backgroundImage">
                 <img src="" alt="" class="avatarImage">
+                <button class="updateAvatar" type="button">Update Avatar</button>
             </div>
             <div class="card-body">
                 <h2></h2>
@@ -78,7 +81,27 @@
                     <p class="wins"></p>
                     <p class="listings"></p>
                 </div>
+                <button class="createListing" type="button">Create Listing</button>
             </div>
+            <form class="createBidContainer listingForm form d-flex">
+                <div class="form-floating">
+                    <label for="listingTitle">Title:</label>
+                    <input type="text" class="form-control" id="listingTitle" placeholder="Title">
+                </div>
+                <div class="form-floating">
+                    <label for="listingDesc">Description:</label>
+                    <input type="text" class="form-control" id="listingDesc" placeholder="What are you selling?">
+                </div>
+                <div class="form-floating">
+                    <label for="listingImg">Image:</label>
+                    <input type="url" class="form-control" id="listingImg" placeholder="URL Image">
+                </div>
+                <div class="form-floating">
+                    <label for="listingEnd">Ends:</label>
+                    <input type="date" class="form-control" id="listingEnd" placeholder="End time and Date">
+                </div>
+                <button class="form-btn" type="submit">Submit Listing</button>
+            </form>
         </section>
         <section class="card shadow">
             <div class="card-body">

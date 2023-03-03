@@ -20,6 +20,7 @@ export function routing() {
             break;
         case returnLoc('profile'):
             listeneres.profileListener(url.FULL_PROFILE_URL)
+            // listeneres.createListing(url.FULL_LISTINGS_URL)
             break;
         case returnLoc('listings'):
             listeneres.listingsListener(url.FULL_LISTINGS_URL);
@@ -27,9 +28,11 @@ export function routing() {
             break;
         case returnLoc('single'):
             listeneres.singleListingListener(url.FULL_LISTINGS_URL);
+            listeneres.bidListener(url.FULL_LISTINGS_URL);
             break;
         default:
             listeneres.listingsListener(url.FULL_LISTINGS_URL);
+            listeneres.bidListener(url.FULL_LISTINGS_URL);
             console.log('default')
             break;
     }

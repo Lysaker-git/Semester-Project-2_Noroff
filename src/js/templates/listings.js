@@ -11,9 +11,9 @@ export function listingPost (title, desc, ends, image, id, bid) {
     const doc = template.content.cloneNode(true);
 
     doc.querySelector('.bids').innerText = bid;
-    console.log(doc.querySelector('.card-link'))
     const location = window.location.href;
-    if (location.includes('index')) {
+    if (location.includes('index') || (location.includes('profile'))) {
+        console.log('run')
         doc.querySelector('.card-link').href += `single.html?id=${id}`
     } else {
         doc.querySelector('.card-link').href = `single.html?id=${id}`

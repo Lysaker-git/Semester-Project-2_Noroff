@@ -54,6 +54,9 @@ function baseLinks (links, container, doc) {
             a.href = link.link;
             a.innerText = link.title;
             a.classList.add('nav-link');
+            if (link.title === 'Sign-up') {
+                a.classList.add('cta-btn');
+            }
             doc.querySelector('.navbar-nav').append(a);
         }
     })
@@ -68,10 +71,18 @@ function loggedInLinks(links, container, doc) {
             a.href = link.link;
             a.innerText = link.title;
             a.classList.add('nav-link');
+            if (link.title === 'Log Out') {
+                a.classList.add('cta-btn');
+                a.addEventListener('click', (e) => {
+                    localStorage.clear();
+                })
+            }
             doc.querySelector('.navbar-nav').append(a);
         }
     })
     container.append(doc)
+
+    
 }
 
 mobileNavTemplate(navObject);

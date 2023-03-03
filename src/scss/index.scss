@@ -111,6 +111,9 @@ nav {
     font-family: $font-normal;
     color: $accent;
 }
+.nav-link:hover {
+    color: $accent;
+}
 .navbar-toggler {
     border: none;
 }
@@ -184,6 +187,9 @@ body {
     display: none;
 }
 .card {
+    position: relative;
+    z-index: 1;
+    border-radius: .5rem;
     --bs-gutter-x: 0;
     border-radius: .5rem;
     border: none;
@@ -194,6 +200,7 @@ body {
     background: $bg-card;
     transition: all .4s ease-in-out;
     transform: scale(1);
+    overflow: visible;
 }
 
 .description {
@@ -211,6 +218,7 @@ body {
 // PROFILE
 
 .profile {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 0 4rem;
@@ -230,7 +238,65 @@ body {
 .img-container {
     position: relative;
 }
+.updateAvatar {
+    top: 0;
+    right: 0;
+    z-index: 3;
+    border-radius: 0 .5rem  0 0;
+}
 
+.createListing, .updateAvatar {
+    background-color: $dark;
+    color: $accent;
+    position: absolute;
+    border: 1px solid $bg-form;
+    padding: 1rem;
+    opacity: .8;
+    transition: opacity .2s ease-in-out;
+}
+.createListing {
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 .5rem 0;
+}
+.createListing:hover, .updateAvatar:hover {
+    opacity: 1;
+}
+.createBidContainer {
+    position: absolute;
+    z-index: -1;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    border-radius: .5rem;
+    top: 0px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    
+}
+.form-floating > label {
+    transform:scale(.85) translateY(-.5rem) translateX(.15rem);
+}
+.createBidContainer > div {
+    margin-top: 1rem;
+}
+
+
+.createVisible {
+    z-index: 99;
+    opacity: 1;
+    top: 340px;
+}
+.form-btn {
+    margin-top: 1rem;
+    border-radius: .5rem;
+    color: $accent;
+    background-color: $dark;
+    border: 3px solid $bg-form;
+    font-weight: 700;
+}
 .img-container img:first-of-type {
     position: absolute;
     z-index: 1;
@@ -365,9 +431,10 @@ input[type=number] {
 }
 
 .card-link {
-    display: block;
+    display: flex;
     text-decoration: none;
     height: 100%;
+    flex-direction: column;
 }
 
 .bids {
@@ -379,4 +446,12 @@ input[type=number] {
 }
 .bids > * p {
     width: 33%;
+}
+
+.cta-btn {
+    background-color: $bg-form;
+    border-radius: 5px;
+}
+.cta-btn:hover {
+    background: $accent;
 }

@@ -10836,6 +10836,10 @@ nav {
   color: #E5FF94;
 }
 
+.nav-link:hover {
+  color: #E5FF94;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -10917,6 +10921,9 @@ body {
 }
 
 .card {
+  position: relative;
+  z-index: 1;
+  border-radius: 0.5rem;
   --bs-gutter-x: 0;
   border-radius: 0.5rem;
   border: none;
@@ -10927,6 +10934,7 @@ body {
   background: rgba(5, 4, 40, 0.3);
   transition: all 0.4s ease-in-out;
   transform: scale(1);
+  overflow: visible;
 }
 
 .description {
@@ -10943,6 +10951,7 @@ body {
 }
 
 .profile {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 0 4rem;
@@ -10966,6 +10975,70 @@ body {
 
 .img-container {
   position: relative;
+}
+
+.updateAvatar {
+  top: 0;
+  right: 0;
+  z-index: 3;
+  border-radius: 0 0.5rem 0 0;
+}
+
+.createListing, .updateAvatar {
+  background-color: #050428;
+  color: #E5FF94;
+  position: absolute;
+  border: 1px solid rgba(229, 255, 148, 0.16);
+  padding: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.createListing {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.createListing:hover, .updateAvatar:hover {
+  opacity: 1;
+}
+
+.createBidContainer {
+  position: absolute;
+  z-index: -1;
+  background-color: #050428;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  top: 0px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-floating > label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.createBidContainer > div {
+  margin-top: 1rem;
+}
+
+.createVisible {
+  z-index: 99;
+  opacity: 1;
+  top: 340px;
+}
+
+.form-btn {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  color: #E5FF94;
+  background-color: #050428;
+  border: 3px solid rgba(229, 255, 148, 0.16);
+  font-weight: 700;
 }
 
 .img-container img:first-of-type {
@@ -11102,9 +11175,10 @@ input[type=number] {
 }
 
 .card-link {
-  display: block;
+  display: flex;
   text-decoration: none;
   height: 100%;
+  flex-direction: column;
 }
 
 .bids {
@@ -11118,6 +11192,15 @@ input[type=number] {
 
 .bids > * p {
   width: 33%;
+}
+
+.cta-btn {
+  background-color: rgba(229, 255, 148, 0.16);
+  border-radius: 5px;
+}
+
+.cta-btn:hover {
+  background: #E5FF94;
 }
 
 /*# sourceMappingURL=index.css.map */
