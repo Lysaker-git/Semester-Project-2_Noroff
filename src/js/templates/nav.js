@@ -2,32 +2,32 @@ const navObject = [
     {
         "title": "Home",
         "state": "current",
-        "link": "/index.html"
+        "link": "./index.html"
     },
     {
         "title": "Listings",
         "state": "current",
-        "link": "/listingPages/listings.html"
+        "link": "./listingPages/listings.html"
     },
     {
         "title": "Sign-in",
         "state": "notLogged",
-        "link": "/authPages/login.html"
+        "link": "./authPages/login.html"
     },
     {
         "title": "Sign-up",
         "state": "notLogged",
-        "link": "/authPages/signup.html"
+        "link": "./authPages/signup.html"
     },
     {
         "title": "Profile",
         "state": "logged",
-        "link": "/userPages/profile.html"
+        "link": "./userPages/profile.html"
     },
     {
         "title": "Log Out",
         "state": "logged",
-        "link": "/index.html"
+        "link": "./index.html"
     }
 ]
 
