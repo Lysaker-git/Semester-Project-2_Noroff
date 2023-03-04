@@ -11119,7 +11119,10 @@ body {
   left: 23px;
   top: 23px;
   z-index: 2;
-  max-width: 86px;
+  width: 86px;
+  height: 86px;
+  object-position: center;
+  object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
 }

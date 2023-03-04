@@ -1,4 +1,5 @@
-
+import { FULL_PROFILE_URL } from "../constants/index.js";
+import { updateMyAvatar } from "../api/index.js";
 
 export function avatarListener () {
     const avatarButton = document.querySelector('.updateAvatar');
@@ -12,12 +13,17 @@ export function avatarListener () {
 
     avatarForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(avatarForm);
         const avatarURL = avatarForm[0].value;
-        const url = '';
+        const name = localStorage.getItem('name');
+        const url = `${FULL_PROFILE_URL}${name}/media`;
+        const method = 'PUT'
+        console.log(url);
         const body = {
             "avatar": avatarURL,
         }
+        console.log(body)
+        const token = localStorage.getItem('accessToken');
         
+        updateMyAvatar(url, body, method, token);
     })
 }

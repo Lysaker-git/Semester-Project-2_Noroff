@@ -1,13 +1,10 @@
 import { headerWithBodyAuth } from "./index.js";
 
-export async function createListing(url, method, body, token) {
-    console.log(body)
+export async function updateMyAvatar(url, body, method, token) {
     const response = await fetch(url, headerWithBodyAuth(method, body, token))
     const json = await response.json();
 
-    
-    if (json.id) {
-        console.log(json);
+    if (json.avatar) {
         window.location.reload();
     }
 }
