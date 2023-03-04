@@ -7,22 +7,22 @@ const navObject = [
     {
         "title": "Listings",
         "state": "current",
-        "link": "./listingPages/listings.html"
+        "link": "./listings.html"
     },
     {
         "title": "Sign-in",
         "state": "notLogged",
-        "link": "./authPages/login.html"
+        "link": "./login.html"
     },
     {
         "title": "Sign-up",
         "state": "notLogged",
-        "link": "./authPages/signup.html"
+        "link": "./signup.html"
     },
     {
         "title": "Profile",
         "state": "logged",
-        "link": "./userPages/profile.html"
+        "link": "./profile.html"
     },
     {
         "title": "Log Out",
