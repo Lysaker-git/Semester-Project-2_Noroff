@@ -17,6 +17,6 @@ export function listingCreationListener () {
         const method = 'POST';
         const token = localStorage.getItem('accessToken');
         createListing(url, method, body, token);
-        // window.location.reload();
+        
     })
 }

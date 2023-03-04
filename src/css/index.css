@@ -11094,6 +11094,15 @@ body {
   margin-top: 1rem;
 }
 
+.historyCard {
+  padding: 1rem;
+  background: rgba(5, 4, 40, 0.3);
+  height: 340px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  overflow: scroll;
+}
+
 .createVisible {
   z-index: 99;
   opacity: 1;
