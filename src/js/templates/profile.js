@@ -1,4 +1,5 @@
 import { listingCreationListener } from "../listeners/index.js";
+import { avatarListener } from "../listeners/index.js";
 
 
 export function createProfile (profile) {
@@ -29,6 +30,7 @@ export function createProfile (profile) {
     })
 
     listingCreationListener();
+    avatarListener();
 }
 
 export function createBidHistory (bids, container) {

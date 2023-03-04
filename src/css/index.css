@@ -10934,7 +10934,75 @@ body {
   background: rgba(5, 4, 40, 0.3);
   transition: all 0.4s ease-in-out;
   transform: scale(1);
+}
+
+.profileCard {
+  position: relative;
+  z-index: 2;
+  border-radius: 0.5rem;
+  --bs-gutter-x: 0;
+  border-radius: 0.5rem;
+  border: none;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  flex: 1 1 325px;
+  max-height: fit-content;
+  background: rgba(5, 4, 40, 0.3);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
   overflow: visible;
+}
+
+.profileCard > .card-body {
+  padding: 1rem;
+}
+
+.profileCard img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.changeAvatarContainer {
+  position: absolute;
+  background-color: rgba(5, 4, 40, 0.3);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  top: 58px;
+  display: flex;
+  z-index: 3;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.changeAvatarContainer button {
+  width: fit-content;
+  background: #E5FF94;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-weight: 700;
+  font-family: "Atkinson Hyperledgible", sans-serif;
+}
+
+.changeAvatarContainer input {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.form-floating {
+  width: 100%;
+}
+
+.form-floating input {
+  width: 100%;
+}
+
+.changeAvatarContainerVisible {
+  top: 132px;
+  opacity: 1;
+}
+
+.form-floating {
+  display: flex;
 }
 
 .description {
