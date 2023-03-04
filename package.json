@@ -1,0 +1,34 @@
+{
+  "name": "epic-bids",
+  "version": "0.0.5",
+  "description": "Epic Bids auction page for Noroff semester project 2nd year",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:src/css",
+    "watch": "sass --watch src/scss:src/css & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lysaker-git/Semester-Project-2_Noroff.git"
+  },
+  "keywords": [
+    "Auction",
+    "house",
+    "Semester",
+    "project"
+  ],
+  "author": "Robin Lysaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lysaker-git/Semester-Project-2_Noroff/issues"
+  },
+  "homepage": "https://github.com/Lysaker-git/Semester-Project-2_Noroff#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

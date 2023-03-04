@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Bids | Profile</title>
+    <script type="module" src="../src/js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/css/index.css">    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg container">
+        <div class="container-fluid">
+            <img src="/assets/images/Asset 8 1.svg" alt="Epic Bids logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <label for="check">
+                <input type="checkbox" id="check"/> 
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <form class="profileForm form d-flex">
+            <label for="search">Search Listings:</label>
+            <input type="text" class="form-control" id="search">
+        </form>
+        <section class="cards">
+            <div class="loadingContainer">
+                <p class="loadingContent shadow">Loading your content...</p>
+            </div>
+           
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <template class="navTemplate">
+        <div class="navbar-nav">
+        </div>
+    </template>
+
+    <template class="cardTemplateLoggedIn">
+        <section type="button" class="card shadow">
+            <a class="card-link" href="">
+                <img loading="lazy" src="" alt="">
+                <div class="card-body">
+                    <div class="card-upper">
+                        <h2></h2>
+                        <p class="description"></p>
+                    </div>
+                    <div class="card-inner mt-auto">
+                        <div class="card-inner-left">
+                            <p class="title">Time left:</p>
+                            <p class="timeLeft"><strong></strong></p>
+                        </div>
+                        <div class="card-inner-right">
+                            <p class="title">Highest Bid:</p>
+                            <p><strong class="bids"></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <div class="bid-container">
+                    <form class="form" action="">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="bidInput" placeholder="Price">
+                            <label for="bidInput">Type an amount:</label>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn">Bid</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+    </template>
+
+    <template class="cardTemplate">
+        <section class="card shadow">
+            <a class="card-link" href="">
+                <img loading="lazy" src="" alt="">
+                <div class="card-body">
+                    <h2></h2>
+                    <p class="description"></p>
+                    <div class="card-inner">
+                        <div class="card-inner-left">
+                            <p class="title">Time left:</p>
+                            <p class="timeLeft"><strong></strong></p>
+                        </div>
+                        <div class="card-inner-right">
+                            <p class="title">Highest Bid:</p>
+                            <p><strong class="bids"></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </section>
+    </template>
+</body>
+</html>
