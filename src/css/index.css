@@ -10882,6 +10882,9 @@ header {
   display: grid;
   place-content: center;
   background-image: url(../../assets/images/index-backdrop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
   background-color: #363356;
   background-blend-mode: multiply;
   margin-bottom: 5rem;
