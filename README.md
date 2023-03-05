@@ -27,10 +27,10 @@ What can you find there?
     <img src="assets/images/Asset 8 1.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Epic Bids</h3>
 
   <p align="center">
-    project_description
+    Short:
     <br />
     <a href="https://github.com/Lysaker-git/Semester-Project-2_Noroff"><strong>Explore the repo »</strong></a>
     <br />
