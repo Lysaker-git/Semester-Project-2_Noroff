@@ -72,7 +72,8 @@ export function creatingForms (page) {
     
     
     const button = doc.querySelector('button');
-    button.innerText = "Sign In";
+    location.pathname.includes('signup') ? button.innerText = "Sign Up" : button.innerText = "Sign In";
+    
     const htmlContainer = document.querySelector('.forms-main');
     htmlContainer.append(doc)
 
