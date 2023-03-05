@@ -10,16 +10,18 @@ export function listingPost (title, desc, ends, image, id, bid) {
 
     const doc = template.content.cloneNode(true);
 
-    doc.querySelector('.bids').innerText = bid;
+    doc.querySelector('.bids').innerText = `${bid} Credits`;
     doc.querySelector('.card-link').href = `single.html?id=${id}`
-    doc.querySelector('.card-link').id = id;
+    doc.querySelector('.card').id = id;
     doc.querySelector('h2').innerText = title;
     doc.querySelector('.description').innerText = desc;
 
     if (image) {
+        console.log(image)
         doc.querySelector('img').src = image;
     } else {
-        doc.querySelector('img').src = "../../../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash(1)(1).jpg"
+        console.log("nope", title)
+        doc.querySelector('img').src = "./assets/images/filler.png"
     }
     const timeElement = doc.querySelector('.timeLeft');
     getTimeLeft(ends, timeElement)
