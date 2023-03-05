@@ -10,7 +10,7 @@ export function listingPost (title, desc, ends, image, id, bid) {
 
     const doc = template.content.cloneNode(true);
 
-    doc.querySelector('.bids').innerText = bid;
+    doc.querySelector('.bids').innerText = `${bid} Credits`;
     doc.querySelector('.card-link').href = `single.html?id=${id}`
     doc.querySelector('.card').id = id;
     doc.querySelector('h2').innerText = title;

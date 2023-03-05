@@ -11032,6 +11032,24 @@ body {
   margin-top: 2rem;
 }
 
+.bidHistory .card-inner {
+  display: flex;
+  flex-direction: column;
+}
+.bidHistory .card-inner div {
+  display: flex;
+  background: rgba(5, 4, 40, 0.3);
+  padding: 1rem;
+  margin: 0.2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.bidHistory .card-inner div p {
+  height: 100%;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
 .profile {
   position: relative;
   display: flex;
@@ -11300,6 +11318,31 @@ input[type=number] {
 
 .cta-btn:hover {
   background: #E5FF94;
+}
+
+.messageBox {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  place-content: center;
+  background: #E5FF94;
+  border: 2px solid #050428;
+  padding: 1rem;
+  display: grid;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.messageBox p {
+  color: #050428;
+  font-size: 25.89px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.errorVisible {
+  bottom: 0;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
