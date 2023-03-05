@@ -1,11 +1,10 @@
 import { headerWithBodyNoAuth } from "../api/index.js"
 import { loginUser } from "./index.js";
 import { FULL_LOGIN_URL } from "../constants/index.js";
+import { createErrors } from "./index.js";
 
 export async function registerUser(url, body, method) {
     try {
-        console.log(body.password)
-        console.log(body)
         const response = await fetch(url, headerWithBodyNoAuth(method, body))
         const json = await response.json();
     
@@ -18,12 +17,12 @@ export async function registerUser(url, body, method) {
                 "email": name,
                 "password": password,
             }
-            const method = 'POST';
-            console.log(FULL_LOGIN_URL);
-            console.log(bodyForLogin)
-            
+            const method = 'POST';            
     
             loginUser(FULL_LOGIN_URL, bodyForLogin, method);
+        } else {
+            const errors = json.errors;
+            createErrors(errors);
         }
     } catch (e) {
         console.log(e)

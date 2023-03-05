@@ -1,5 +1,4 @@
 export function footerTemplate() {
-    console.log('footer checking in')
 
     const footer = document.querySelector('footer')
     const div = document.createElement('div');

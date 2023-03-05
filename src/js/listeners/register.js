@@ -1,4 +1,5 @@
 import { registerUser } from "../users/index.js";
+import { createErrors } from "../users/index.js";
 
 
 function checkingEquals(first, second) {
@@ -8,7 +9,6 @@ function checkingEquals(first, second) {
 export function signupListener(url) {
     const form = document.querySelector('form')
     form.addEventListener('submit', (e) => {
-        console.log(form)
         e.preventDefault();
         const data = new FormData(form);
 
@@ -30,9 +30,30 @@ export function signupListener(url) {
             registerUser(url, body, method)
             
         } else {
-            console.log('Nope')
+            checkEmail(email, confirmEmail);
+            if (pass != confirmPass) {
+                checkPass(pass, confirmPass);
+            }
         }
 
     })
 }
 
+function checkPass (value, checkValue) {
+    const errorArray = [];
+    if (value != checkValue) {
+        errorArray.push({'message': 'Password does not match'})
+    }
+    createErrors(errorArray);
+}
+
+function checkEmail (value, checkValue) {
+    const errorArray = []
+    if (value != checkValue) {
+        errorArray.push({'message': 'E-mail is not equal'})
+    }
+    if (!value.includes('noroff')) {
+        errorArray.push({'message': 'E-mail needs to include noroff or stud.noroff'})
+    }
+    createErrors(errorArray);
+}

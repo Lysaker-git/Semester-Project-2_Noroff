@@ -11321,7 +11321,8 @@ input[type=number] {
 }
 
 .messageBox {
-  position: absolute;
+  position: fixed;
+  z-index: 4;
   bottom: 50px;
   left: 0;
   right: 0;

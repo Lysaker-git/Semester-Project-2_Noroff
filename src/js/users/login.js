@@ -12,20 +12,27 @@ export async function loginUser(url, body, method) {
             storingToken('name', json.name);
             window.location.assign('./profile.html');
         } else {
-            const messageBox = document.querySelector('.messageBox');
-            messageBox.innerHTML = '';
             const errors = json.errors;
-            errors.forEach ((error) => {
-                const p = document.createElement('p');
-                p.innerText = error.message;
-                messageBox.append(p)
-            })
-            messageBox.classList.add('errorVisible')
-            console.log(json.errors)
+            createErrors(errors);
         }
 
     } catch (e) {
         console.log(e)
     }
 
+}
+
+export function createErrors (errors) {
+    console.log(errors)
+    const messageBox = document.querySelector('.messageBox');
+    messageBox.innerHTML = '';
+    errors.forEach ((error) => {
+        const p = document.createElement('p');
+        p.innerText = error.message;
+        messageBox.append(p)
+    })
+    messageBox.classList.add('errorVisible')
+    setTimeout(() => {
+        messageBox.classList.remove('errorVisible')
+    }, 5000)
 }
