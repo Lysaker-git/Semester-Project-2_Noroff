@@ -10775,6 +10775,17 @@ h1, .h1, h2, .h2, h3, .h3, p, a {
   color: #E5FF94;
 }
 
+body {
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -10870,7 +10881,7 @@ header {
   height: 19rem;
   display: grid;
   place-content: center;
-  background-image: url(../../assets/images/john-schnobrich-2FPjlAyMQTA-unsplash\(1\)\(1\).jpg);
+  background-image: url(../../assets/images/index-backdrop.jpg);
   background-color: #363356;
   background-blend-mode: multiply;
   margin-bottom: 5rem;
@@ -10913,7 +10924,7 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 6.25rem;
+  gap: 2rem 6.25rem;
 }
 
 .hidden {
@@ -11016,6 +11027,9 @@ body {
 .card-inner-right {
   text-align: end;
   justify-content: flex-end;
+}
+.card-inner .title {
+  margin-top: 2rem;
 }
 
 .profile {
@@ -11134,6 +11148,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 1px 1px 3px rgb(5, 4, 40);
 }
 
 .img-container {
@@ -11223,6 +11238,10 @@ input[type=number] {
   max-width: 350px;
   margin-left: auto;
   margin-bottom: 3rem;
+  padding: 1rem;
+  background: rgba(5, 4, 40, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px rgba(5, 4, 40, 0.3);
 }
 .profileForm label {
   width: fit-content;

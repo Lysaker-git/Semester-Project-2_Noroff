@@ -2,7 +2,7 @@ import { singleListingPost } from "../templates/index.js";
 
 
 export function singleListingSetup (listing) {
-        // console.log(listing)
+        console.log(listing)
         const Title = listing.title;
         const Desc = listing.description;
         const Ends = listing.endsAt;
@@ -15,7 +15,7 @@ export function singleListingSetup (listing) {
         if (lastBid != undefined) {
             bidAmount = lastBid.amount;
         }
-
+        // console.log(Id)
         const loadingContainer = document.querySelector('.loadingContainer')
         loadingContainer.style.display = "none"
         singleListingPost(Title, Desc, Ends, Image, Id, bidAmount, sortedBids);
