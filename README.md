@@ -16,10 +16,7 @@ What can you find there?
 - Kanban Board
 - Wireframes
 - Prototypes
-
-### Built With
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-
+- 
 ### About the project
 
 <div align="center">
