@@ -14,7 +14,7 @@ export function listingSetup (listings) {
         if (lastBid != undefined) {
             bidAmount = lastBid.amount;
         }
-
+        console.log(listing)
         const loadingContainer = document.querySelector('.loadingContainer')
         loadingContainer.style.display = "none"
         listingPost(Title, Desc, Ends, Image, Id, bidAmount);
