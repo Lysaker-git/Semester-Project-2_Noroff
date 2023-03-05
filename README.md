@@ -16,5 +16,58 @@ What can you find there?
 - Kanban Board
 - Wireframes
 - Prototypes
+- 
+### About the project
+
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="assets/images/Asset 8 1.svg" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Epic Bids</h3>
+
+  <p align="center">
+    Short:
+    <br />
+    <a href="https://github.com/Lysaker-git/Semester-Project-2_Noroff"><strong>Explore the repo »</strong></a>
+    <br />
+    <br />
+    <a href="https://lysaker-git.github.io/Semester-Project-2_Noroff/index.html">View Demo</a>
+    ·
+    <a href="https://github.com/Lysaker-git/Semester-Project-2_Noroff/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Lysaker-git/Semester-Project-2_Noroff/issues">Request Feature</a>
+  </p>
+</div>
+
+
+### Installation
+
+1. Clone the repo
+  ```sh
+    gh repo clone Lysaker-git/Semester-Project-2_Noroff
+  ```
+2. Install NPM packages
+  ```sh
+    npm install
+  ```
+3. Run Build to enable SASS
+  ```
+  npm run build
+  ```
+  
+## License
+
+Distributed under the MIT License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+Robin L - lysakerwcs@hotmail.com
+
+Project Link: [https://github.com/Lysaker-git/Semester-Project-2_Noroff](https://github.com/Lysaker-git/Semester-Project-2_Noroff)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### More to come as project develops
