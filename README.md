@@ -4,7 +4,12 @@ Epic Bids Auctions
 ![Epic bids page](https://raw.githubusercontent.com/Lysaker-git/svelte-portfolio/master/src/lib/assets/epicBids.jpg)
 
 ## Semester project for Noroff Academy
-This is the repo for semester project year 2 of noroff
+This is the repo for semester project year 2 of noroff - An auction site that you can create account on and bid on items posted by others.
+
+## Description
+This site is built with HTML, CSS ans JS. Utilizing bootstrap for most of its styling. It is built on top of Noroffs API for students.
+It is documented fully on Notion as a platform for timelines and everything between. 
+The project was done in year two of my education. Sticking to my wish of minimalistic design and easy to navigate. 
 
 ## Documentation
 All Documentation of the project will be listed at this page: 
@@ -18,7 +23,6 @@ What can you find there?
 - Kanban Board
 - Wireframes
 - Prototypes
-- 
 ### About the project
 
 <div align="center">
