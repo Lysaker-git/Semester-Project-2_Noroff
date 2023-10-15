@@ -1,6 +1,8 @@
 # EB Auctions
 Epic Bids Auctions
 
+![Epic bids page](https://raw.githubusercontent.com/Lysaker-git/svelte-portfolio/master/src/lib/assets/epicBids.jpg)
+
 ## Semester project for Noroff Academy
 This is the repo for semester project year 2 of noroff
 
